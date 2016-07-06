@@ -102,3 +102,15 @@ Instantiated bike as an attribute of DockingStation and passed feature and unit 
 **Step 12. **
 
 Only allowed one bike out at a time. Requires bike to be docked before can be released.
+
+**Step 13. **
+
+Complete.
+
+**Step 14. **
+
+Allowed for a total of 20 bikes to exist. This is reflected in both dock and release bike.
+
+**Step 15. **
+
+Created an empty and full private method to manage capacity.
