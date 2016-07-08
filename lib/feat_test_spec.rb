@@ -12,17 +12,42 @@ bike2 = Bike.new
 puts "creating a bike"
 puts bike2
 
-puts "Docking a bike"
-puts docking_station.dock(bike2)
-
-puts "Docking a bike"
-puts docking_station.dock(bike1)
+bike3 = Bike.new
+puts "creating a bike"
+puts bike3
 
 puts "bike reports"
-puts bike1.report
+puts bike1.report, bike2.report, bike3.report
+
 
 puts "is bike working?"
 puts bike1.working?
 
-puts "releasing a bike"
-puts docking_station.release_bike
+#puts "Docking a bike"
+#puts docking_station.dock(bike2)
+
+puts "Docking a bike"
+puts docking_station.dock(bike1)
+puts docking_station.dock(bike2)
+puts docking_station.dock(bike3)
+#puts "releasing a bike"
+#puts docking_station.release_bike
+
+puts "creating a van"
+puts van = Van.new
+
+puts "creating a garage"
+puts garage = Garage.new
+
+puts "van takes docking_station and garage"
+puts van.take(docking_station, garage)
+
+#puts "Garage repairs bike"
+#puts garage.repair
+#puts "van distributes bike (back to docking station)"
+#puts van.distribute(bike1)
+
+
+
+#puts "garage repairs bike"
+#puts garage.repair(bike)

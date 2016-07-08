@@ -1,4 +1,6 @@
 require_relative 'bike'
+require_relative 'van'
+require_relative 'garage'
 
 class DockingStation
   attr_accessor :bikes
@@ -14,6 +16,7 @@ class DockingStation
   def dock(bike)
     fail 'Docking station full' if full?
     @bikes << bike
+  
   end
 
   def release_bike
