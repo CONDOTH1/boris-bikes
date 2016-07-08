@@ -12,11 +12,13 @@ class DockingStation
   end
 
   def dock(bike)
-    full? ? (fail 'Docking station full') : @bikes << bike
+    fail 'Docking station full' if full?
+    @bikes << bike
   end
 
   def release_bike
-    empty? ? (fail 'No bike available') : @bikes.pop
+    fail 'No bike available' if empty?
+    @bikes.pop
   end
 
   private
