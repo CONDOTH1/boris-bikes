@@ -17,8 +17,20 @@ class DockingStation
   end
 
   def release_bike
+
+    counter = 0
+    while counter < @bikes.length
+      if @bikes[counter].working?
+        return @bikes.delete_at(counter)
+      end
+      counter += 1
+    end
+
     fail 'No bike available' if empty?
-    @bikes.pop
+    fail 'No working bikes available'
+    #fail 'Bikes are broken' unless @bikes.last.working?
+
+
   end
 
   private
@@ -26,9 +38,12 @@ class DockingStation
     @bikes.count >= @capacity
   end
 
-  private
   def empty?
     @bikes.empty?
+  end
+
+  def broken?
+
   end
 
 end
